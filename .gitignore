@@ -6,7 +6,7 @@
 #igonorar arquivos
 # ignora qualquer arquivo excel
 *.xlsx
-#ignora a pasta docs (que se estiver vazia nem aparece)
+#ignora pastas (que se estiver vazia nem aparece)
 docs
 # ignora qualquer arquivo pdf
 *.pdf
