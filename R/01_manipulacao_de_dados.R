@@ -120,7 +120,7 @@ colnames(comm.df)
 #Queremos agora adicionar a coluna Sites ao novo objeto. Vamos usar a função rep(). Esta função cria sequências. Vamos criar uma sequência de localidades, em que cada uma das 97 localidades se repete 56 vezes. A sequência deve ter também 5432 elementos.
 
 # primeiro criamos a sequência
-seq.site <- rep(Sites, each = n.sp)
+seq.site <- rep(Sites, times = n.sp)
 # checando a dimensão
 length(seq.site)
 # adicionando ao objeto comm.df
@@ -155,3 +155,5 @@ head(comm.total)
 write.csv(x = comm.total,
           file = "data/01_data_format_combined.csv",
           row.names = FALSE)
+
+#ps. função view() muito melhor pra visualizar
