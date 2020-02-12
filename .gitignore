@@ -1,0 +1,10 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+#igonorar arquivos -> *
+# ignora arquivos excel
+*.xlsx
+#ignora a pasta docs (que se estiver vazia nem aparece)
+*.docs
