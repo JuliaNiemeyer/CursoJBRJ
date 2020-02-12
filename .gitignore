@@ -3,8 +3,10 @@
 .RData
 .Ruserdata
 
-#igonorar arquivos -> *
-# ignora arquivos excel
+#igonorar arquivos
+# ignora qualquer arquivo excel
 *.xlsx
 #ignora a pasta docs (que se estiver vazia nem aparece)
-*.docs
+docs
+# ignora qualquer arquivo pdf
+*.pdf
