@@ -107,3 +107,52 @@ abline(a = coef_d[1],
 #2. determinar a sequência de comandos que cria o gráfico
 
 #3. finalizar a construção do arquivo com a função dev.off()
+
+# a funcao png cria o arquivo, daqui pra frente você não vai mais ver o gráfico
+png("figs/figura01.png", res = 300, width = 2400, height = 1200)
+# define parametros graficos
+
+par(mfrow = c(1, 3),
+    las = 1,
+    bty = "l") # aqui estamos usando las e bty dentro do par para fixar para todas as janelas
+# plot da riqueza em função do teor de Silte
+plot(rich ~ Silt, data = localidades,
+     col = "tomato",
+     ylim = limy, xlim = limx,
+     ylab = laby,
+     xlab = "Teor de Silte (%)")
+# linha do previsto pelo modelo
+## a + b*x
+abline(a = coef_s[1], b = coef_s[2],
+       col = 'tomato', lwd = 2)
+mtext("A", 3, adj = 0, font = 2)
+
+## plot da riqueza em função do teor de Argila
+plot(rich ~ Clay, data = localidades,
+     col = "navy",
+     ylim = limy, xlim = limx,
+     ylab = "",
+     xlab = "Teor de Argila (%)")
+mtext("B", 3, adj = 0, font = 2)
+# linha do previsto pelo modelo
+## a + b*x
+abline(a = coef_c[1],
+       b = coef_c[2],
+       col = 'navy',
+       lwd = 2)
+
+## plot da riqueza em função do teor de Areia
+plot(rich ~ Sand, data = localidades,
+     col = "dodgerblue",
+     ylim = limy, xlim = limx,
+     ylab = "",
+     xlab = "Teor de Areia (%)")
+mtext("C", 3, adj = 0, font = 2)
+# linha do previsto pelo modelo
+## a + b*x
+abline(a = coef_d[1],
+       b = coef_d[2],
+       col = 'dodgerblue',
+       lwd = 2)
+# para finalizar o gráfico e gerar o arquivo, precisamos rodar o dev.off()
+dev.off()

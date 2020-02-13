@@ -156,7 +156,7 @@ write.csv(x = comm.total,
           file = "data/01_data_format_combined.csv",
           row.names = FALSE)
 
-#ps. função view() muito melhor pra visualizar
+#ps. função View() muito melhor pra visualizar
 # salvar em .rda um arquivo que queremos mas não precisando salvar o workspace mas poderemos precisar depois e carregar na area de trabalho. Assim ele não fica tão pesado: save(objeto, "caminho+nome.rda")
 
 
