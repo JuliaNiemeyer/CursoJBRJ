@@ -171,11 +171,19 @@ dev.off()
 # fixando uma semente de numeros aleatorios para manter o mesmo resultado no sample
 set.seed(42)
 # criando um data frame com valores medios e desvio padrão de uma variável
+d2 <- data.frame(name = letters[1:5],
+                 value = sample(seq(4, 15), 5),
+                 sd = c(1, 0.2, 3, 2, 4))
+
+
 #Agora vamos:
 
 #1. Fazer o plot dos pontos
 #2. Adicionar a configuração do eixo x na mão com a função axis
 #3. Adicionar os valores de desvio padrão em torno da média com a função arrows
+
+#png deve vir ANTES dos codigos do grafico e termina com dev.off()
+png("figs/figura03.png", res = 300, width = 2400, height = 1200)
 
 plot(x = 1:5, d2$value, las = 1, bty = 'l',
      ylim = c(0, 18), pch = 19, xaxt = 'n',
@@ -183,6 +191,7 @@ plot(x = 1:5, d2$value, las = 1, bty = 'l',
 axis(1, at = 1:5, labels = d2$name)
 arrows(x0 = 1:5,
        y0 = d2$value + d2$sd,
-       y1 = d2$value - d2$sd, angle = 90, length = 0.05, code = 3) <- data.frame(name = letters[1:5],
-                 value = sample(seq(4, 15), 5),
-                 sd = c(1, 0.2, 3, 2, 4))
+       y1 = d2$value - d2$sd, angle = 90, length = 0.05, code = 3)
+
+# para finalizar o gráfico e gerar o arquivo, precisamos rodar o dev.off()
+dev.off()

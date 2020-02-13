@@ -33,13 +33,16 @@ You can also embed plots, for example:
 plot(pressure)
 ```
 
-Figure02 created during exercise number 7 
+Figure01 created during exercise number 7 
 ![](../figs/figura01.png)
 
 Figure 02 created during exercise number 7
 ```{r figura_2, echo=FALSE}
 knitr::include_graphics("../figs/figura02.png")
 ```
+
+Figure03 created during exercise number 7 
+![](../figs/figura03.png)
 
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
