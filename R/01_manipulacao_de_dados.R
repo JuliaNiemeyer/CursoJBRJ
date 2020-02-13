@@ -157,3 +157,12 @@ write.csv(x = comm.total,
           row.names = FALSE)
 
 #ps. função view() muito melhor pra visualizar
+# salvar em .rda um arquivo que queremos mas não precisando salvar o workspace mas poderemos precisar depois e carregar na area de trabalho. Assim ele não fica tão pesado: save(objeto, "caminho+nome.rda")
+
+
+##Dever de casa
+## instalar os pacotes hoje a noite Knitr ; rmarkdown e todas as dependencias
+install.packages("knitr", dependencies = T)
+install.packages("rmarkdown", dependencies = T)
+
+##terminar o turorial de git
